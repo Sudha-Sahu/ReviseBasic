@@ -1,17 +1,15 @@
-
 from datetime import datetime
+import time
+
 
 if __name__ == "__main__":
-    try:
-        today_day = datetime.now()
-        print("Today's Date is : ", today_day)
-        start_time = datetime.now()
-        print("Today's Date and Time is : ", start_time)
-        end_time = datetime.now()
-        print("Today's Date and Time is : ", end_time)
+    today_day = datetime.now()
+    print("Today's Date is : ", today_day)
+    start_time = time.time()
+    print("Start Time is : ", start_time)
+    time.sleep(5)
+    end_time = time.time()
+    print("End Time is : ", end_time)
 
-        elapse_time = start_time - end_time
-        print(elapse_time)
-    except:
-        print("invalid date")
-
+    elapse_time = end_time - start_time
+    print(f"Time Elapsed(seconds) --> {elapse_time}")

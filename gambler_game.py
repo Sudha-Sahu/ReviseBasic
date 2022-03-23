@@ -27,8 +27,8 @@ def play_game(_stake, _goal, _no_of_times):
             else:
                 loss += 1
         return win, loss, count_bet
-    except Exception as e:
-        print(f"{e} is raised....")
+    except Exception:
+        print("some error arises....")
 
 
 def main():
